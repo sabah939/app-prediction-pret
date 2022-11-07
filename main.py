@@ -1,7 +1,7 @@
 import pickle
 import pandas as pd
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.preprocessing import StandardScaler
+#from sklearn.preprocessing import MinMaxScaler
+#from sklearn.preprocessing import StandardScaler
 from sklearn import preprocessing
 import streamlit as st
 import numpy as np
