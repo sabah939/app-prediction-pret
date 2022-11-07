@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import pickle
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
@@ -8,8 +6,6 @@ from sklearn import preprocessing
 import streamlit as st
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 import os
 
 primaryColor="#2214c7"
