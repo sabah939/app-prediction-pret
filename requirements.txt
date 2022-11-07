@@ -1,3 +1,4 @@
 streamlit
 sklearn
-pickle
+pickle-mixin
+hmmlearn==0.1.1
