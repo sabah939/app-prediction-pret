@@ -6,7 +6,6 @@ from sklearn import preprocessing
 import streamlit as st
 import numpy as np
 import pandas as pd
-import os
 
 primaryColor="#2214c7"
 backgroundColor="#ffffff"
