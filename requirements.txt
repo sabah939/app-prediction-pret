@@ -1,2 +1,3 @@
 sklearn
 pickle-mixin
+boto3
