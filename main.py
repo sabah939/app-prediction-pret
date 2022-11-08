@@ -57,4 +57,37 @@ if bouton:
      st.write("Oui, le pret est accordé")
    else: 
      st.write("Non, on ne peut pas accorder le pret à ce client")
+ 
+ #Sauvegarde de données sur AWS
+import boto3
+
+def putNewRes(credit_history, loan_amount, ApplicantIncome, CoapplicantIncome, Loan_Amount_Term, Dependents, dynamodb=None):
+
+  if not dynamodb:
+    dynamodb = boto3.resource('dynamodb', region_name='eu-west-3', aws_access_key_id='AKIAQ5AG5VAP52K4XJFY',
+     aws_secret_access_key='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')
+  newid = getNewId()
+  id = str(newid)
+  table = dynamodb.Table('prediction_pret_results')
+  response = table.put_item(
+    Item={
+      'id': id,
+      'credit_history': credit_history,
+      'loan_amount': loan_amount,
+      'ApplicantIncome': ApplicantIncome,
+      'CoapplicantIncome': CoapplicantIncome,
+      'Loan_Amount_Term': Loan_Amount_Term,
+      'Dependents':Dependents 
+    } )
+  return response
+
+def getNewId(dynamodb=None):
+  if not dynamodb:
+    dynamodb = boto3.resource('dynamodb', region_name='eu-west-3', aws_access_key_id='AKIAQ5AG5VAP52K4XJFY',
+     aws_secret_access_key='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')
+  table = dynamodb.Table('prediction_pret_results')
+  response = table.scan()
+  return response['Count']
+putNewRes(credit_history, loan_amount, ApplicantIncome, CoapplicantIncome, Loan_Amount_Term, Dependents)
+
 
