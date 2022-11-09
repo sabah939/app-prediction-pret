@@ -57,7 +57,8 @@ if bouton:
      st.write("Oui, le pret est accordé")
    else: 
      st.write("Non, on ne peut pas accorder le pret à ce client")
- 
+
+
 
 
 
