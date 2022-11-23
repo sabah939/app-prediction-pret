@@ -3,6 +3,7 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 import pandas as pd
+from sklearn.preprocessing import StandardScaler
 
 primaryColor="#2214c7"
 backgroundColor="#ffffff"
