@@ -1,8 +1,5 @@
 import pickle
 import pandas as pd
-#from sklearn.preprocessing import MinMaxScaler
-#from sklearn.preprocessing import StandardScaler
-from sklearn import preprocessing
 import streamlit as st
 import numpy as np
 import pandas as pd
@@ -34,8 +31,6 @@ def user_input():
    parametres_pret =pd.DataFrame(data,index=[0])
    return parametres_pret
  
- 
- 
 scaler=pickle.load(open('scaler.pkl','rb'))
  
 df=user_input()
@@ -57,8 +52,3 @@ if bouton:
      st.write("Oui, le pret est accordé")
    else: 
      st.write("Non, on ne peut pas accorder le pret à ce client")
-
-
-
-
-
