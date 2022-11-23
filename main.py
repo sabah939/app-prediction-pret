@@ -3,8 +3,8 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 import pandas as pd
-#from sklearn.preprocessing import MinMaxScaler
-#from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import StandardScaler
 from sklearn import preprocessing
 
 primaryColor="#2214c7"
