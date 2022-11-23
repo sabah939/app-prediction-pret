@@ -1,3 +1,4 @@
 sklearn
 pickle-mixin
 boto3
+scikit-learn
